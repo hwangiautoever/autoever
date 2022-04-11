@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formulas>
+        <name>dcrate</name>
+        <dataType>Number</dataType>
+        <expression>(1-{!$Record.Rollup_Total__c}/{!$Record.Rollout_Total_List__c})*100</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>SELA Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SELA Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>rollupfieldsto</name>
+        <label>롤업필드 일반필드로 변경</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>DC_rate__c</field>
+            <value>
+                <elementReference>dcrate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>List_Price_Total__c</field>
+            <value>
+                <elementReference>$Record.Rollout_Total_List__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Total__c</field>
+            <value>
+                <elementReference>$Record.Rollup_Total__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <startElementReference>rollupfieldsto</startElementReference>
+    <status>Active</status>
+</Flow>
