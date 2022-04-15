@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StrikethroughPricebookId</fullName>
+    <inlineHelpText>가격 목록에 제품의 원래 표시 가격 및 구매자에게 적용된 할인 가격을 같이 표시합니다.</inlineHelpText>
+    <type>Lookup</type>
+</CustomField>

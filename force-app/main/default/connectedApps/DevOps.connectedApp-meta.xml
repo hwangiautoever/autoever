@@ -7,11 +7,18 @@
         <certificate>MIIDETCCAfkCFDlOUD6BnrDcFetgTTaUft3SjQ1eMA0GCSqGSIb3DQEBCwUAMEUxCzAJBgNVBAYTAktSMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwHhcNMjIwNDA4MDAwNzQ4WhcNMjMwNDA4MDAwNzQ4WjBFMQswCQYDVQQGEwJLUjETMBEGA1UECAwKU29tZS1TdGF0ZTEhMB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy8j3xfCaiC62isEN3aLTP44Yf51rAjSYfPj/xIEnOAWCbZwXIggwtEar5TqXi5qniXuop/FMBc+mb4b/5XivCwIa1f06CC595Rh0wK2z/lE+/F5G2QIqcXwUzqGtdCgpNe/3TLaMA16oUt7TgVU2rL/7jYh4Keth7gHT027PhPxHuJPmcgph5Mn9DI0f3dZC6N8rnPSt2YVdvLu9ee9WooxyuorRya91869aONZt1F8vxynJ9dClZCvxUNpkZhlVys2QjJ8PMjCWhq8hTX7JHWzKGWzHk7z6wOpjlCjoL4POYUHKZrg84VINK2KZVIcDiUioKfM9huvAK97LpzVKVQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQABQlpiLjKWXYTjqZxQDr3P5WAvCYukRy/HgzqSWrsyZRorJXWH5Ew+UaIGaKwd85f5VSgo2pOaWtPg/r6+Jw/WLNYJbK7w5xiBYU7Pm8zr3XAx3nf2ZTsl3xkhCdN/Z9/XeZCOvL7LVD7L347ZbWxpJaqHanuMTA8Mms+4sRZ5VboS3ygX7DF9egOJ3YDTW7IGES0wDbBH+X2Fwe4aL6O3BQrRvNqXjNf3G/lDfcVBXviPPI4d4PCEtaud6SsiOfOHkKUaM5yMCZkXqJ2Y+ZLUWLexBPsoGYeU3k5HrZEnNrTplQHCVy4W2uIxWeS82xCGLe2OJ+6nwJfdtXW5cbz+</certificate>
         <consumerKey>3MVG9pRzvMkjMb6lZavKQTrS_rp1yyjZSdPRj7N7Yb8GIoxak__uj1B5yBc2CoqWz_JKvx0Yh57cq2cvDo3RH</consumerKey>
         <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
         <scopes>Basic</scopes>
         <scopes>Api</scopes>
         <scopes>Web</scopes>
         <scopes>RefreshToken</scopes>
     </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
     <profileName>시스템 관리자</profileName>
     <profileName>Customer Community Login User</profileName>
     <profileName>Authenticated Website</profileName>

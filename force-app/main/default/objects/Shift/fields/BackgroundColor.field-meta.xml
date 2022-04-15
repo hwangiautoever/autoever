@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BackgroundColor</fullName>
+    <inlineHelpText>일정 보기에서 교대 근무를 강조 표시할 배경색을 설정하십시오.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

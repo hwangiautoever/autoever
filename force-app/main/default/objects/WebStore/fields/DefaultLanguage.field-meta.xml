@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DefaultLanguage</fullName>
+    <inlineHelpText>콘텐츠 번역본을 사용할 수 없는 경우 사용하는 언어. 이 값은 번역 워크벤치에서 조직에 가장 먼저 지원되는 언어에서 가져옵니다.</inlineHelpText>
+</CustomField>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
     <assignments>
         <name>fmField</name>
         <label>수식필드</label>
@@ -240,6 +241,7 @@
         <connector>
             <targetReference>SELA_Item_Loop</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>SELA__c</field>
             <operator>EqualTo</operator>
@@ -247,7 +249,9 @@
                 <elementReference>$Record.SELA__c</elementReference>
             </value>
         </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>SelaProductLineItem__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
         <name>SELA_Rollup</name>
@@ -258,6 +262,7 @@
         <connector>
             <targetReference>Rollup</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
             <operator>EqualTo</operator>
@@ -265,7 +270,9 @@
                 <elementReference>$Record.SELA__c</elementReference>
             </value>
         </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Sela__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
         <name>DC_Update</name>
@@ -323,7 +330,16 @@
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
-    <startElementReference>Product_DC_Rate_Check</startElementReference>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Product_DC_Rate_Check</targetReference>
+        </connector>
+        <object>SelaProductLineItem__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
     <status>Active</status>
     <variables>
         <name>currentItem_Product_DC_Rate_Check</name>

@@ -7,10 +7,17 @@
         <certificate>MIIC6TCCAdECFE1w+nBzHDa8Zsgln7/boz3toNbVMA0GCSqGSIb3DQEBCwUAMDExCzAJBgNVBAYTAktSMRMwEQYDVQQIDApTb21lLVN0YXRlMQ0wCwYDVQQKDARmYW5nMB4XDTIyMDQwODAwMjcwMloXDTIzMDQwODAwMjcwMlowMTELMAkGA1UEBhMCS1IxEzARBgNVBAgMClNvbWUtU3RhdGUxDTALBgNVBAoMBGZhbmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8lWYYi8AFIJ/W6wr0yhOj8tHANDmVyZslQMRoyD+er/wEJapYuFMrhTUSH1Gaq9SMb2+fND9KAY+Bhgm7ZVeLvtoV5fcbk8TGIFVCNfM/HG6izFCqZ1zObyVmYAujuhf/ZNHNYq7LgGtXVrDuZmp4m0ZIn7jY1K1GXDAQyNRvtt7v49ug4tp7e31NaSybMVxjCOIjdJ/1B3mVdrleFdB7LKTBD7NEb4AQ8Us5GdZwCEECYyUgvMZuIGAMW8NsH+QYTwt+DtLFrx9ash7J6iaA5MtoiO6vbYD/uTBugiRED9BK5F7p3LYuOt2EEbZfj1pSpG/4RPPAAxTJQO5LFgzHAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAI8fys2u0ADzwxBgrSb0nzlgEA8BFRQz5TdkSsWN/7v2usDCgaan9fzNoR2rlByjcTV/Yoypkae9n3suQMbZEICvMg9YraDy2PjLiIpmdPUQisBD4EOWX31ygTIIjnuPIdHR/H/Zqy9VfGb6hWuIBX6cj78BJVd3PkiXLO5F5vzMBarl/l/yQKlxxbTCe/vT/bCYu0kRKW6TIyCJOE5kHRYTgl7/mTX3cai2lC2hRfG7Z9YC0cChS+PPWY9DGuge/RZKnXeS1Zr3Hkqvn6A0qI8hh3TSDbrjnm0KQUrpq/VE/6PQKnarfX/YIPONQsz/00qmw37PBZqdRAnz4eQaB+0=</certificate>
         <consumerKey>3MVG9pRzvMkjMb6lZavKQTrS_rpghptcrgZ.zENMbl38cUB5bchC4zko55krCSBtcTT91AWs2DUcDEgySpdy1</consumerKey>
         <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
         <scopes>Basic</scopes>
         <scopes>Api</scopes>
         <scopes>Web</scopes>
         <scopes>RefreshToken</scopes>
     </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
     <profileName>시스템 관리자</profileName>
 </ConnectedApp>
