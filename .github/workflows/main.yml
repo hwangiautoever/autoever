@@ -13,8 +13,10 @@ on:
         required: true
         default: 'two'
         description: 'input value'
-
-
+        
+  pull_request:
+   branches: [ master ]       
+   types: [labeled]
    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,5 +30,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
   
-    - name: Send greeting
-      run: echo "${{ github.event.inputs.val1 }} ${{ github.event.inputs.val2 }}"
+    - name: Send inputs
+      run: echo "${{ github.event.inputs.val1 }} ${{ github.event.inputs.val2 }}" 
+      
+    - name: Send labels
+      run: echo "${{ github.event.pull_request.labels }}" 
+      
+      
